@@ -20,6 +20,9 @@ Despesas json
     pagamentoDeTaxas Double
     energiaEAgua 
     telefone Double
+    materialDeEscritorio Double
+    materialDeLimpeza Double
+    manutencaoEConservacao Double
     
     
     
