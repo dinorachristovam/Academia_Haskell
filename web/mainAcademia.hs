@@ -29,6 +29,7 @@ Despesas json
 mkYesod "Pagina" [parseRoutes|
 
 /despesas DespesasR GET POST
+/despesas/total TotalDespesasR GET
 
 
 |]
@@ -46,6 +47,13 @@ getDespesasR :: Handler ()
 getDespesasR = do
     allDespesas <- runDB $ selectList [] [Asc DespesasDiaMesAno]
     sendResponse (object [pack "data" .= allDespesas])
+    
+getTotalDespesasR :: Handler ()
+getTotalDespesasR = do
+    allDespesas <- runDB $ selectList [] [Asc DespesasDiaMesAno]
+    let total = Prelude.foldl (\acumulador despesa -> acumulador + (calcularTotalPorDespesa ( despesa))) 0 allDespesas
+        calcularTotalPorDespesa (Entity _ (Despesas _ es a p ea t me ml mc)) = es + a + p + ea + t + me + ml + mc
+    sendResponse (object [pack "data" .= total])
     
 postDespesasR :: Handler ()
 postDespesasR = do
