@@ -66,6 +66,10 @@ getActionDespesasR pid = do
     cli <- runDB $ get404 pid
     sendResponse $ toJSON cli
 
+deleteActionDespesasR :: DespesasId -> Handler ()
+deleteActionDespesasR pid = do
+    runDB $ delete pid
+    sendResponse (object [pack "resp" .= pack "DELETED"])
 
 
 connStr = "dbname=dco2uk5ioda5q2 host=ec2-23-21-167-249.compute-1.amazonaws.com user=herlhdsndxdiiu password=aNhBPPs7a3RVnfg1slcxG5q12K port=5432"
