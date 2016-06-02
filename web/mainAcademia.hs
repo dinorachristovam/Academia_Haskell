@@ -60,6 +60,11 @@ postDespesasR = do
     desp <- requireJsonBody :: Handler Despesas
     runDB $ insert desp
     sendResponse (object [pack "resp" .= pack "CREATED"])
+    
+getActionDespesasR :: DespesasId -> Handler ()
+getActionDespesasR pid = do
+    cli <- runDB $ get404 pid
+    sendResponse $ toJSON cli
 
 
 
