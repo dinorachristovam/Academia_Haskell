@@ -20,10 +20,17 @@ Despesas json
     pagamentoDeTaxas Double
     energiaEAgua 
     telefone Double
-    materialDeEscritorio Double
-    materialDeLimpeza Double
-    manutencaoEConservacao Double
+    
+    
+    
     deriving Show
+|]
+
+mkYesod "Pagina" [parseRoutes|
+
+/despesas DespesasR GET POST
+
+
 |]
 
 
