@@ -40,6 +40,12 @@ instance YesodPersist Pagina where
        master <- getYesod
        let pool = connPool master
        runSqlPool f pool
+       
+       
+getDespesasR :: Handler ()
+getDespesasR = do
+    allDespesas <- runDB $ selectList [] [Asc DespesasDiaMesAno]
+    sendResponse (object [pack "data" .= allDespesas])
 
 
 
