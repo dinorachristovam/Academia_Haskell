@@ -23,9 +23,6 @@ Despesas json
     materialDeEscritorio Double
     materialDeLimpeza Double
     manutencaoEConservacao Double
-    
-    
-    
     deriving Show
 |]
 
@@ -37,7 +34,12 @@ mkYesod "Pagina" [parseRoutes|
 |]
 
 
-
+instance YesodPersist Pagina where
+   type YesodPersistBackend Pagina = SqlBackend
+   runDB f = do
+       master <- getYesod
+       let pool = connPool master
+       runSqlPool f pool
 
 
 
