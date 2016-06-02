@@ -46,6 +46,12 @@ getDespesasR :: Handler ()
 getDespesasR = do
     allDespesas <- runDB $ selectList [] [Asc DespesasDiaMesAno]
     sendResponse (object [pack "data" .= allDespesas])
+    
+postDespesasR :: Handler ()
+postDespesasR = do
+    desp <- requireJsonBody :: Handler Despesas
+    runDB $ insert desp
+    sendResponse (object [pack "resp" .= pack "CREATED"])
 
 
 
