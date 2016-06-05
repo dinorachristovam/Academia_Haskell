@@ -49,3 +49,11 @@ descritas acima:
           ,"materialDeEscritorio": 25.0
           ,"materialDeLimpeza": 32.0
           ,"manutencaoEConservacao": 45.0}'
+          
+          
+** para listar despesas**
+
+    curl https://web-dinorachristovam.c9users.io/despesas \
+      -v \
+      -X GET \
+      -H 'Content-Type: application/json' 
