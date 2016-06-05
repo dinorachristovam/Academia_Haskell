@@ -114,3 +114,20 @@ descritas acima:
 ** para listar Funcionarios na URL **
 
     https://web-dinorachristovam.c9users.io/cadastroFuncionarios 
+    
+    
+** alterar cadastro funcionario **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroFuncionarios/action/1 \
+      -v \
+      -X PUT \
+      -H 'Content-Type: application/json' \
+      -d '{ "nome": "Maria"
+          , "dataNascimento": "21/02/1990"
+          , "funcao": "Administrador"
+          , "rg": "987654321"
+          , "cpf": "123456789"
+          , "salario": 2000
+          , "periodoDeFerias": "11/11/2016"
+          , "endereco": "Av. Bartolomeu de Gusmão"
+          , "telefone": "3333-33333" }'
