@@ -101,3 +101,11 @@ descritas acima:
           , "periodoDeFerias": "11/11/2016"
           , "endereco": "Av. Bartolomeu de Gusmão"
           , "telefone": "3333-33333" }'
+          
+          
+** para listar funcionarios **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroFuncionarios \
+      -v \
+      -X GET \
+      -H 'Content-Type: application/json' 
