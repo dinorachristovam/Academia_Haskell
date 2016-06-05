@@ -62,3 +62,11 @@ descritas acima:
 ** para listar Despesas na URL **
 
     https://web-dinorachristovam.c9users.io/despesas 
+    
+    
+** para somar despesas**
+
+    curl https://web-dinorachristovam.c9users.io/despesas/total \
+      -v \
+      -X GET \
+      -H 'Content-Type: application/json'
