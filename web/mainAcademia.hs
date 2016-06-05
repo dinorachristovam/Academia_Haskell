@@ -61,6 +61,11 @@ postUserR = do
 
 ----------------- FUNCIONARIO --------------------------------------------------
 
+getFuncR :: Handler ()
+getFuncR = do
+    allFuncionarios <- runDB $ selectList [] [Asc CadastroFuncionariosNome]
+    sendResponse (object [pack "resp" .= fmap toJSON allFuncionarios])
+
 
 ------------------ DESPESAS ---------------------------------------------------   
 
