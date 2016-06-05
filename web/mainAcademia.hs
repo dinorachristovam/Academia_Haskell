@@ -94,6 +94,12 @@ getActionFuncionarioR :: CadastroFuncionariosId -> Handler ()
 getActionFuncionarioR fuid = do
     allFuncionarios <- runDB $ selectList [] [Asc CadastroFuncionariosNome]
     sendResponse (object [pack "data" .= fmap toJSON allFuncionarios])
+    
+putActionFuncionarioR :: CadastroFuncionariosId -> Handler ()
+putActionFuncionarioR fuid = do
+    cli <- requireJsonBody :: Handler CadastroFuncionarios
+    runDB $ update fuid [CadastroFuncionariosNome =. cadastroFuncionariosNome cli]
+    sendResponse (object [pack "resp" .= pack "UPDATED"])
 
 
 ------------------ DESPESAS ---------------------------------------------------   
