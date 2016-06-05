@@ -28,8 +28,11 @@ Despesas json
 
 mkYesod "Pagina" [parseRoutes|
 
-/despesas DespesasR GET POST
+/cadastroClientes UserR GET POST   -- cadastroClientes
+/cadastroFuncionarios FuncR POST GET  --cadastroFuncionarios
+/despesas DespesasR GET POST           --cadastroDespesas
 /despesas/total TotalDespesasR GET
+
 
 
 |]
