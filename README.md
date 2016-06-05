@@ -18,3 +18,34 @@ desta tabela.
 
 Em seguida fornecemos o caminho para acessar todas as informações 
 descritas acima:  
+
+
+** entra na pasta web **
+
+    --cd web
+       --stack build 
+       
+    ** stack exec 
+          -- web (nome da pasta) **
+
+ 
+      
+** -------------------- ACADEMIA HASKELL -------------------------------------**
+
+**  ==>  DESPESAS  <==  **
+
+** para inserir  Despesas **
+ 
+    curl https://web-dinorachristovam.c9users.io/despesas \
+      -v \
+      -X POST \
+      -H 'Content-Type: application/json' \
+      -d '{"diaMesAno":"15/10/16"
+          ,"encargosSociais": 1200.0
+          ,"aluguel": 750.0
+          ,"pagamentoDeTaxas": 250.0
+          ,"energiaEAgua": 85.0
+          ,"telefone": 102.0
+          ,"materialDeEscritorio": 25.0
+          ,"materialDeLimpeza": 32.0
+          ,"manutencaoEConservacao": 45.0}'
