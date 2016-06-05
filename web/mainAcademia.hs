@@ -23,6 +23,18 @@ CadastroClientes json
    endereco Text
    mensalidade Double
    deriving Show
+   
+CadastroFuncionarios json
+   nome Text
+   dataNascimento Text
+   funcao Text
+   rg Text
+   cpf Text
+   salario Double
+   periodoDeFerias Text
+   endereco Text
+   telefone Text
+   deriving Show
 
 Despesas json
     diaMesAno Text
