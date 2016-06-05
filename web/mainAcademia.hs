@@ -32,6 +32,7 @@ mkYesod "Pagina" [parseRoutes|
 /cadastroFuncionarios FuncR POST GET  --cadastroFuncionarios
 /despesas DespesasR GET POST           --cadastroDespesas
 /despesas/total TotalDespesasR GET
+/cadastroClientes/action/#CadastroClientesId ActionClienteR GET PUT DELETE
 
 
 
