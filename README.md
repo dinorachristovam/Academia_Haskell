@@ -75,3 +75,10 @@ descritas acima:
 ** para somar despesas na URL**
     
     https://web-dinorachristovam.c9users.io/despesas/total 
+    
+    
+** para deletar despesa **
+
+    curl https://web-dinorachristovam.c9users.io/despesas/action/3 \
+      -v \
+      -X DELETE
