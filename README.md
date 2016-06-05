@@ -149,3 +149,11 @@ descritas acima:
           , "telefone": "3322-9876"
           , "endereco": "av. Afonso Pena, 15"
           , "mensalidade": 120 }'
+          
+          
+** para listar clientes **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroClientes \
+      -v \
+      -X GET \
+      -H 'Content-Type: application/json'
