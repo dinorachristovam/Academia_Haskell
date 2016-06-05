@@ -17,4 +17,5 @@ listar todos eles e podemos calcular a soma de todas as despesas  provenientes
 desta tabela.
 
 Em seguida fornecemos o caminho para acessar todas as informações 
-descritas acima:  
+descritas acima:   
+
