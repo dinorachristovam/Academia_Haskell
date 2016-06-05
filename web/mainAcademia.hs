@@ -52,6 +52,11 @@ getUserR = do
     allClientes <- runDB $ selectList [] [Asc CadastroClientesNome]
     sendResponse (object [pack "data" .= fmap toJSON allClientes])       
 
+postUserR :: Handler ()
+postUserR = do
+    clientes <- requireJsonBody :: Handler CadastroClientes
+    runDB $ insert clientes
+    sendResponse (object [pack "resp" .= pack "CREATED"])
 
 
 ----------------- FUNCIONARIO --------------------------------------------------
