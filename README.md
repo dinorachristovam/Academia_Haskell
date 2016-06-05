@@ -82,3 +82,22 @@ descritas acima:
     curl https://web-dinorachristovam.c9users.io/despesas/action/3 \
       -v \
       -X DELETE
+      
+      
+**  ==>  FUNCIONARIOS  <==  **
+
+** para inserir cadastro funcionario **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroFuncionarios \
+      -v \
+      -X POST \
+      -H 'Content-Type: application/json' \
+      -d '{ "nome": "Antonio"
+          , "dataNascimento": "21/02/1990"
+          , "funcao": "Administrador"
+          , "rg": "987654321"
+          , "cpf": "123456789"
+          , "salario": 2000
+          , "periodoDeFerias": "11/11/2016"
+          , "endereco": "Av. Bartolomeu de Gusmão"
+          , "telefone": "3333-33333" }'
