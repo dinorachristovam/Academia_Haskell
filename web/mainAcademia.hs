@@ -65,6 +65,12 @@ getFuncR :: Handler ()
 getFuncR = do
     allFuncionarios <- runDB $ selectList [] [Asc CadastroFuncionariosNome]
     sendResponse (object [pack "resp" .= fmap toJSON allFuncionarios])
+    
+postFuncR :: Handler ()   
+postFuncR = do
+    funcionarios <- requireJsonBody :: Handler CadastroFuncionarios
+    runDB $ insert funcionarios
+    sendResponse (object [pack "resp" .= pack "CREATED"])
 
 
 ------------------ DESPESAS ---------------------------------------------------   
