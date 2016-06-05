@@ -57,3 +57,8 @@ descritas acima:
       -v \
       -X GET \
       -H 'Content-Type: application/json' 
+      
+      
+** para listar Despesas na URL **
+
+    https://web-dinorachristovam.c9users.io/despesas 
