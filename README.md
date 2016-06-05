@@ -31,8 +31,9 @@ descritas acima:
  
       
 ** -----------------------------------------------------------------------------------------------------**
-##despesas
-**  ==>  DESPESAS  <==  **
+
+##Despesas
+
 
 ** para inserir  Despesas **
  
@@ -83,8 +84,9 @@ descritas acima:
       -v \
       -X DELETE
       
-      
-**  ==>  FUNCIONARIOS  <==  **
+ 
+##Funcionarios      
+
 
 ** para inserir cadastro funcionario **
 
@@ -141,7 +143,7 @@ descritas acima:
   
   
           
-**  ==>  CLIENTES  <==  ** 
+##Clientes 
 
 
 ** para inserir Cadastro Clientes **
