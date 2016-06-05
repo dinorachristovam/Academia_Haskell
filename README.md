@@ -132,6 +132,14 @@ descritas acima:
           , "endereco": "Av. Bartolomeu de Gusmão"
           , "telefone": "3333-33333" }'
           
+  
+** para deletar funcionarios **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroFuncionarios/action/1 \
+      -v \
+      -X DELETE  
+  
+  
           
 **  ==>  CLIENTES  <==  ** 
 
