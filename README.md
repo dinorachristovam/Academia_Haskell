@@ -131,3 +131,21 @@ descritas acima:
           , "periodoDeFerias": "11/11/2016"
           , "endereco": "Av. Bartolomeu de Gusmão"
           , "telefone": "3333-33333" }'
+          
+          
+**  ==>  CLIENTES  <==  ** 
+
+
+** para inserir Cadastro Clientes **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroClientes \
+      -v \
+      -X POST \
+      -H 'Content-Type: application/json' \
+      -d '{ "nome": "Clarice"
+          , "turma": "2B"
+          , "idade": "22 anos"
+          , "sexo": "Fem"
+          , "telefone": "3322-9876"
+          , "endereco": "av. Afonso Pena, 15"
+          , "mensalidade": 120 }'
