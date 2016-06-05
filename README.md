@@ -177,3 +177,10 @@ descritas acima:
           , "telefone": "3322-9876"
           , "endereco": "av. Afonso Pena, 15"
           , "mensalidade": 130 }'
+          
+          
+** para deletar clientes **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroClientes/action/1 \
+      -v \
+      -X DELETE
