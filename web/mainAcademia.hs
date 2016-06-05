@@ -34,7 +34,7 @@ mkYesod "Pagina" [parseRoutes|
 /despesas/total TotalDespesasR GET
 /cadastroClientes/action/#CadastroClientesId ActionClienteR GET PUT DELETE
 /cadastroFuncionarios/action/#CadastroFuncionariosId ActionFuncionarioR GET PUT DELETE
-
+/despesas/action/#DespesasId ActionDespesasR GET DELETE
 
 
 |]
