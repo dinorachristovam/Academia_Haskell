@@ -100,6 +100,12 @@ putActionFuncionarioR fuid = do
     cli <- requireJsonBody :: Handler CadastroFuncionarios
     runDB $ update fuid [CadastroFuncionariosNome =. cadastroFuncionariosNome cli]
     sendResponse (object [pack "resp" .= pack "UPDATED"])
+    
+deleteActionFuncionarioR :: CadastroFuncionariosId -> Handler ()
+deleteActionFuncionarioR fuid = do
+    runDB $ delete fuid
+    sendResponse (object [pack "resp" .= pack "DELETED"])
+
 
 
 ------------------ DESPESAS ---------------------------------------------------   
