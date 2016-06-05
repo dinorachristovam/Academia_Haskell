@@ -13,6 +13,17 @@ instance Yesod Pagina
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 
+-- Criacao das tabelas do Banco de Dados
+CadastroClientes json
+   nome Text
+   turma Text
+   idade Text
+   sexo Text
+   telefone Text
+   endereco Text
+   mensalidade Double
+   deriving Show
+
 Despesas json
     diaMesAno Text
     encargosSociais Double
