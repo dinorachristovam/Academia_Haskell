@@ -69,6 +69,11 @@ putActionClienteR pid = do
     cli <- requireJsonBody :: Handler CadastroClientes
     runDB $ update pid [CadastroClientesNome =. cadastroClientesNome cli]
     sendResponse (object [pack "resp" .= pack "UPDATED"])
+    
+deleteActionClienteR :: CadastroClientesId -> Handler ()
+deleteActionClienteR pid = do
+    runDB $ delete pid
+    sendResponse (object [pack "resp" .= pack "DELETED"])
 
 
 ----------------- FUNCIONARIO --------------------------------------------------
