@@ -157,3 +157,8 @@ descritas acima:
       -v \
       -X GET \
       -H 'Content-Type: application/json'
+      
+      
+** para listar Clientes na URL **
+
+    https://web-dinorachristovam.c9users.io/cadastroClientes 
