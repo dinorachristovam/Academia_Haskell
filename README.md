@@ -162,3 +162,18 @@ descritas acima:
 ** para listar Clientes na URL **
 
     https://web-dinorachristovam.c9users.io/cadastroClientes 
+    
+    
+** alterar cadastro clientes **
+
+    curl https://web-dinorachristovam.c9users.io/cadastroClientes/action/1 \
+      -v \
+      -X PUT \
+      -H 'Content-Type: application/json' \
+      -d '{ "nome": "Clarice"
+          , "turma": "2B"
+          , "idade": "22 anos"
+          , "sexo": "Fem"
+          , "telefone": "3322-9876"
+          , "endereco": "av. Afonso Pena, 15"
+          , "mensalidade": 130 }'
