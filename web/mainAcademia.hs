@@ -58,6 +58,17 @@ postUserR = do
     clientes <- requireJsonBody :: Handler CadastroClientes
     runDB $ insert clientes
     sendResponse (object [pack "resp" .= pack "CREATED"])
+    
+getActionClienteR :: CadastroClientesId -> Handler ()
+getActionClienteR pid = do
+    cli <- runDB $ get404 pid --se nao encontrar nada retorna 404
+    sendResponse $ toJSON cli -- se achar
+    
+putActionClienteR :: CadastroClientesId -> Handler ()
+putActionClienteR pid = do
+    cli <- requireJsonBody :: Handler CadastroClientes
+    runDB $ update pid [CadastroClientesNome =. cadastroClientesNome cli]
+    sendResponse (object [pack "resp" .= pack "UPDATED"])
 
 
 ----------------- FUNCIONARIO --------------------------------------------------
